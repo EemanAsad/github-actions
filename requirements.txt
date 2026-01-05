@@ -1,5 +1,4 @@
-pandas 
-notebook
+pandas
 numpy
 scikit-learn
 matplotlib
