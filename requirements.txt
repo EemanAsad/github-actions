@@ -10,4 +10,4 @@ joblib
 types-PyYAML
 Flask
 Flask-Cors
-#these 
+#these are the requirements
