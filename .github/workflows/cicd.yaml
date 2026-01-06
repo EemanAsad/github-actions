@@ -79,8 +79,11 @@ jobs:
       # Stop old container if running
       - name: Stop old container
         run: |
-          docker ps -q --filter "name=mlops-app" | grep -q . && \
-          docker stop mlops-app && docker rm mlops-app || true
+          $container = docker ps -q --filter "name=mlops-app"
+          if ($container) {
+              docker stop mlops-app
+              docker rm mlops-app
+          }
 
       # Run new container
       - name: Run Docker container
