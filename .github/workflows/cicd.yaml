@@ -65,7 +65,7 @@ jobs:
   local-deploy:
     name: Deploy Locally
     needs: dockerhub-build
-    runs-on: self-hosted
+    runs-on: [self-hosted, windows]
     steps:
       # Checkout code (optional)
       - name: Checkout code
