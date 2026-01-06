@@ -88,10 +88,7 @@ jobs:
       # Run new container
       - name: Run Docker container
         run: |
-          docker run -d \
-            -p 8080:8080 \
-            --name mlops-app \
-            ${{ secrets.DOCKERHUB_USERNAME }}/mlops-app:latest
+          docker run -d -p 8080:8080 --name mlops-app ${{ secrets.DOCKERHUB_USERNAME }}/mlops-app:latest
 
       # Cleanup unused Docker resourcessss
       - name: Cleanup Docker
