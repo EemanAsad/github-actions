@@ -90,7 +90,7 @@ jobs:
             --name mlops-app \
             ${{ secrets.DOCKERHUB_USERNAME }}/mlops-app:latest
 
-      # Cleanup unused Docker resourcesss
+      # Cleanup unused Docker resourcessss
       - name: Cleanup Docker
         run: |
           docker system prune -f
